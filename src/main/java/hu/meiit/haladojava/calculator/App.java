@@ -8,7 +8,15 @@ public class App
 
     private static final String errorResponse = "-";
     private static String [] parse(String expression){
-        String[] returnValue = expression.split(" ");
+        String[] returnValue = new String[0];
+       // String[] returnValue = expression.split(" ");
+        if(expression.length()>3) {
+            returnValue = expression.split(" ");
+        }
+        else if(expression.length()==3)
+        {
+            returnValue=expression.split("");
+        }
         return returnValue;
     }
 
