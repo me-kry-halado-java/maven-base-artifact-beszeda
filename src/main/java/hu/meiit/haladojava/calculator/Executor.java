@@ -1,7 +1,7 @@
 package hu.meiit.haladojava.calculator;
 
 public class Executor {
-
+    public static final String nulloszto = "-";
 
     public double add ( double operand1, double operand2){
         return  operand1 + operand2;
@@ -10,6 +10,7 @@ public class Executor {
         return operand1 - operand2;
     }
     public double div (double operand1, double operand2){
+
         return  operand1 / operand2;
     }
     public double multip (double operand1, double operand2){

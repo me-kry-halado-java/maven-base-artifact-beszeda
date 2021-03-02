@@ -50,11 +50,13 @@ public class App
         }else if (expression.getOperator().equals("-")) {
             result = String.valueOf(executor.sub(expression.getOperand1(), expression.getOperand2()));
         } else if (expression.getOperator().equals("/")) {
-            result = String.valueOf(executor.div(expression.getOperand1(), expression.getOperand2()));
+            if (expression.getOperand2() == 0){
+                result = "-";
+            }else {
+                result = String.valueOf(executor.div(expression.getOperand1(), expression.getOperand2()));
+            }
         } else if (expression.getOperator().equals("*")) {
             result = String.valueOf(executor.multip(expression.getOperand1(), expression.getOperand2()));
-        }else if (expression.getOperand2()== 0 ){
-            return "-";
         }
         return result;
     }
