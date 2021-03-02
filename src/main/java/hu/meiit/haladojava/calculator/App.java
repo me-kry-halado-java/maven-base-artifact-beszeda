@@ -53,6 +53,8 @@ public class App
             result = String.valueOf(executor.div(expression.getOperand1(), expression.getOperand2()));
         } else if (expression.getOperator().equals("*")) {
             result = String.valueOf(executor.multip(expression.getOperand1(), expression.getOperand2()));
+        }else if (expression.getOperand1()== 0 ){
+            return "-";
         }
         return result;
     }
