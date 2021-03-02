@@ -46,9 +46,9 @@ public class App
 
         String result = errorResponse;
         if (expression.getOperator().equals("+")) {
-            result = String.valueOf(expression.getOperand1() + expression.getOperand2());
+            result = String.valueOf(executor.add(expression.getOperand1(), expression.getOperand2()));
         }else if (expression.getOperator().equals("-")) {
-            result = String.valueOf(expression.getOperand1() - expression.getOperand2());
+            result = String.valueOf(executor.sub(expression.getOperand1(), expression.getOperand2()));
         } else if (expression.getOperator().equals("/")) {
             result = String.valueOf(executor.div(expression.getOperand1(), expression.getOperand2()));
         } else if (expression.getOperator().equals("*")) {
