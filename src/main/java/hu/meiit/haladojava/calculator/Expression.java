@@ -7,7 +7,7 @@ public class Expression {
     private final double operand2;
 
 
-    public Expression(double operand1, String operator,double operand2) {
+    public Expression(double operand1, String operator, double operand2) {
         this.operand1 = operand1;
         this.operand2 = operand2;
         this.operator = operator;
