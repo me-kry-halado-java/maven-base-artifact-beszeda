@@ -2,14 +2,13 @@ package hu.meiit.haladojava.calculator;
 
 import java.util.Scanner;
 
-//asd
-public class App {
 
+public class App {
+    private static final int numberOfOperand = 3;
     private static final String errorResponse = "-";
 
     private static String[] parse(String expression) {
         String[] returnValue = new String[0];
-        // String[] returnValue = expression.split(" ");
         if (expression.length() > 3) {
             returnValue = expression.split(" ");
         } else if (expression.length() == 3) {
@@ -29,16 +28,16 @@ public class App {
 
     public static void assertExpression(String[] parts) throws Exception {
 
-        if (parts.length != 3) {
+        if (parts.length != numberOfOperand) {
             throw new Exception("wrong input");
         }
     }
 
     private static Expression getAsExpression(String[] parts) {
         return new Expression(
-                Integer.parseInt(parts[0]),
-                parts[1],
-                Integer.parseInt(parts[2]));
+                Integer.parseInt(parts[numberOfOperand - 3]),
+                parts[numberOfOperand - 2],
+                Integer.parseInt(parts[numberOfOperand - 1]));
     }
 
     public static String executeExpression(Expression expression) {
